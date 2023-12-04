@@ -1,16 +1,15 @@
 
 import './App.css'
 
-import { NavBar } from './components/NavBar/NavBar'
 import { ItemListContainer } from './components/ItemsListContainer/ItemListContainer'
+import MainLayout from './layouts/MainLayout'
 
 function App() {
 
   return (
-    <div className='container-fluid'>
-      <NavBar/>
+    <MainLayout>
       <ItemListContainer greeting='Eden Gardens'/>
-    </div>
+    </MainLayout>
   )
 }
 
