@@ -1,7 +1,36 @@
 export const ItemListContainer = (props) => {
+
     return (
-        <div className="flex justify-center mt-10">
-            <p className="uppercase font-franklin text-5xl text-lime-700">{props.greeting}</p>
+        <div className="block  mt-10">
+            <p className="uppercase text-center font-franklin text-5xl text-lime-700">{props.greeting}</p>
+
+            <div className="flex flex-wrap w-3/2">
+                {
+                    props.productsData.map(product => {
+                        return (
+                            <div key={product.id} className="mx-auto w-60 my-2">
+                                <div className="space-y-1 mx-auto h-full py-2 bg-gray-800 rounded-xl space-x-10">
+                                    <div className="w-auto">
+                                        <img className="flex-1 h-full px-2 rounded-t-xl" src={product.thumbnail} />
+                                    </div>
+                                    <div className="w-2/3">
+                                        <p className="w-full text-2xl font-semibold text-white">{product.title}</p>
+                                        <p className="w-full pb-8 text-sm tracking-wide leading-tight text-white">{product.description}</p>
+                                        <div>
+                                            <p className="w-full pb-8 text-m tracking-wide leading-tight text-white">$ {product.price}</p>
+                                        </div>
+                                        <div className="rounded w-3/3">
+                                            <div className="opacity-95 border rounded-lg border-white px-4">
+                                                <p className="m-auto inset-0 text-sm font-medium leading-normal text-center text-white py-2">Buy now</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        )
+                    })
+                }
+            </div>
         </div>
     )
 }

@@ -1,9 +1,9 @@
 import { NavBar } from "../components/NavBar/NavBar"
 
-const MainLayout = ({children}) => {
+const MainLayout = ({ children }) => {
   return (
     <div className='container-fluid'>
-      <NavBar/>
+      <NavBar />
       {children}
     </div>
   )
