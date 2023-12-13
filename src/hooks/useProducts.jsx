@@ -7,7 +7,7 @@ import { getProducts } from '../services';
  */
 
 
-export const useGetProducts = (limit = 30) => {
+export const useGetProducts = (limit = 10) => {
     const [productsData, setProductsData] = useState([]);
 
     useEffect(() => {
