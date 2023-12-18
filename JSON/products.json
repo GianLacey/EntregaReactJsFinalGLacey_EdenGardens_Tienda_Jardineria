@@ -1,0 +1,177 @@
+{
+    "plants": [
+        {
+            "id": 1,
+            "title": "Palmera Butia Yatay",
+            "description": "Las Palmera Butia son unas de las más resistentes que existen. Resisten heladas a unos -14ºC. Prefiere los suelos arenosos y soporta suelos y climas salinos. Existen 2 variedades de las mas conocidas muy similares: la butia yatay y la butia capitata (mayor altura) que son muy difíciles de distinguir. Sus hojas son muy arqueadas de un color verde grisáseo o azulado. Su tronco esta cubierto por restos de vainas de las hojas caídas muy marcadas y características de esta especie.",
+            "price": 7000,
+            "type": "Palmera",
+            "thumbnail": "https://acdn.mitiendanube.com/stores/002/094/351/products/butia-palm-s1-7e4035f1d82e3c90c116824791170512-1024-1024.webp",
+            "images": [
+                "https://acdn.mitiendanube.com/stores/002/094/351/products/buttia-capitata1-7a2a77b52ad3cba85e16824781811572-640-0.webp",
+                "https://acdn.mitiendanube.com/stores/002/094/351/products/butia-capitata-90bece70c24569033617005307964027-640-0.webp"
+            ]
+        },
+        {
+            "id": 2,
+            "title": "Taxodium Distichum (Ciprés Calvo)",
+            "description": "El Ciprés Calvo (Taxodium) es un árbol único es una elección excepcional para aquellos que buscan agregar elegancia y belleza natural a su paisaje. Con su distintiva forma piramidal y su follaje exuberante, el Ciprés Calvo es un símbolo de serenidad y encanto atemporal. Es de hoja caduca, es decir que sus hojas caen en otoño para dejar entrar la luz solar y brotan nuevamente en primavera y verano para dar sombra. Es uno de los cipreces de hoja caduca mas conocido y es por eso que es uno de los mas elegidos.",
+            "price": 10000,
+            "type": "Pino",
+            "thumbnail": "https://acdn.mitiendanube.com/stores/002/094/351/products/taxodium-distichum1-91a54ce75af42e7c8616891284606564-1024-1024.webp",
+            "images": [
+                "https://acdn.mitiendanube.com/stores/002/094/351/products/cipres-calvo-021-a080323c6d6831b81416891284604423-640-0.webp"
+            ]
+        },
+        {
+            "id": 3,
+            "title": "Ginkgo Giloba",
+            "description": "El Ginkgo Biloba es apreciado en todo el mundo por su inigualable valor ornamental. Su atractivo radica en su estructura única y su follaje distintivo. Este árbol de hoja caduca presenta hojas en forma de abanico, que se despliegan en un verde brillante durante la primavera y el verano, adquiriendo un hermoso tono dorado en el otoño.",
+            "price": 15000,
+            "type": "Arbol",
+            "thumbnail": "https://acdn.mitiendanube.com/stores/002/094/351/products/beneficios-ginkgo-biloba1-602f6586190cdd8afc16856653461237-640-0.webp",
+            "images": [
+                "https://acdn.mitiendanube.com/stores/002/094/351/products/ginkgo-biloba-20401-3be9f3e770f371ecb416856653460874-640-0.webp",
+                "https://acdn.mitiendanube.com/stores/002/094/351/products/ginkgo-biloba-gingo-o-ginko1-a900ce0ee1fe0e00b916856653462368-640-0.webp"
+            ]
+        }
+    ],
+    "seeds": [
+        {
+            "id": 1,
+            "title": "Albahaca genovèse hoja grande",
+            "description": "Semillas ecológicas de Albahaca genovèse hoja grande",
+            "price": 400,
+            "type": "seed",
+            "thumbnail": "https://cdn2.planetahuerto.es/estaticos/imagenes/ficha/62/62_1.jpg?fit=crop&w=480&h=480&fm=webp&q=100",
+            "images": [
+                ""
+            ]
+        },
+        {
+            "id": 2,
+            "title": "Lavanda Officinalis",
+            "description": "Semillas de Lavanda Officinalis ",
+            "price": 600,
+            "type": "seed",
+            "thumbnail": "https://cdn2.planetahuerto.es/estaticos/imagenes/ficha/531/531_1.jpg?fit=crop&w=480&h=480&fm=webp&q=100",
+            "images": [
+                ""
+            ]
+        },
+        {
+            "id": 3,
+            "title": "Espinaca Butterflay",
+            "description": "Semillas de Espinaca Butterflay ",
+            "price": 550,
+            "type": "seed",
+            "thumbnail": "https://cdn2.planetahuerto.es/estaticos/imagenes/ficha/476/476_1.jpg?fit=crop&w=480&h=480&fm=webp&q=100",
+            "images": [
+                ""
+            ]
+        },
+        {
+            "id": 4,
+            "title": "Zanahoria Nantesa 5 Vergea",
+            "description": "Semillas ecológicas de Zanahoria Nantesa 5 Vergea",
+            "price": 500,
+            "type": "seed",
+            "thumbnail": "https://cdn2.planetahuerto.es/estaticos/imagenes/ficha/68120/68120_1.png?fit=crop&w=480&h=480&fm=webp&q=100",
+            "images": [
+                ""
+            ]
+        }
+    ],
+    "flowerpot": [
+        {
+            "id": 1,
+            "title": "Maceta de cerámica marrón Ø 21x21 cm",
+            "description": "",
+            "price": 1200,
+            "type": "flowerpot",
+            "thumbnail": "https://media.adeo.com/marketplace/LMES/684173/2026106.jpeg?width=3000&height=3000&format=jpg&quality=80&fit=bounds",
+            "images": [
+                ""
+            ]
+        },
+        {
+            "id": 2,
+            "title": "Jardinera auto riego de plástico Millennium antracita 78,5 x 39 cm",
+            "description": "",
+            "price": 1000,
+            "type": "flowerpot",
+            "thumbnail": "https://media.adeo.com/marketplace/LMES/80128481/2882773.png?width=3000&height=3000&format=jpg&quality=80&fit=bounds",
+            "images": [
+                "https://media.adeo.com/marketplace/LMES/80128481/2024222.png?width=650&height=650&format=jpg&quality=80&fit=bounds"
+            ]
+        },
+        {
+            "id": 3,
+            "title": "Maceta Atlantic de fibra natural de Ø 20 cm",
+            "description": "",
+            "price": 700,
+            "type": "flowerpot",
+            "thumbnail": "https://media.adeo.com/marketplace/LMES/82480375/3028298.jpeg?width=3000&height=3000&format=jpg&quality=80&fit=bounds",
+            "images": [
+                "https://media.adeo.com/marketplace/LMES/82480375/3286073.jpeg?width=650&height=650&format=jpg&quality=80&fit=bounds"
+            ]
+        },
+        {
+            "id": 4,
+            "title": "Maceta de polipropileno SAN REMO transparente ø 16 cm",
+            "description": "",
+            "price": 600,
+            "type": "flowerpot",
+            "thumbnail": "https://media.adeo.com/marketplace/LMES/17519656/2030147.png?width=3000&height=3000&format=jpg&quality=80&fit=bounds",
+            "images": [
+                "https://media.adeo.com/marketplace/LMES/17519656/2029844.png?width=650&height=650&format=jpg&quality=80&fit=bounds"
+            ]
+        }
+    ],
+    "tools": [
+        {
+            "id": 1,
+            "title": "Rastrillo de jardín",
+            "description": "Adecuado para el cultivo del suelo, para un trabajo rápido y eficaz, mango de madera de alta calidad",
+            "price": 2000,
+            "type": "tool",
+            "thumbnail": "https://media.cdn.bauhaus/m/470954/12.webp",
+            "images": [
+                ""
+            ]
+        },
+        {
+            "id": 2,
+            "title": "Classic Cortasetos",
+            "description": "Hojas de corte onduladas con revestimiento, antiadherente, para un fácil manejo. Cabezal de corte con peso optimizado y equilibrado. Cuchillas de acero templado y aleado, cuchillas ajustables de afilado automático. Modelo económico para iniciados",
+            "price": 3000,
+            "type": "tool",
+            "thumbnail": "https://media.cdn.bauhaus/m/440357/12.webp",
+            "images": [
+                "https://media.cdn.bauhaus/m/380797/12.webp"
+            ]
+        },
+        {
+            "id": 3,
+            "title": "Tijeras de podar telescópicas",
+            "description": "Alta capacidad de corte gracias a la transmisión, por accionamiento de rodillos. Ligeras y robustas, gracias a los brazos de aluminio de alta calidad. Sistema de corte tipo yunque. Cómodo mango de 2 componentes. Sistema telescópico de gran alcance",
+            "price": 3500,
+            "type": "tool",
+            "thumbnail": "https://media.cdn.bauhaus/m/381079/12.webp",
+            "images": [
+                "https://media.cdn.bauhaus/m/381080/12.webp"
+            ]
+        },
+        {
+            "id": 4,
+            "title": "Pala de jardinero",
+            "description": "Laya con alojamiento redondo. Protegida contra el óxido. Cava y levanta tierra con facilidad",
+            "price": 1000,
+            "type": "tool",
+            "thumbnail": "https://media.cdn.bauhaus/m/168136/12.webp",
+            "images": [
+                "https://media.cdn.bauhaus/m/1614892-2/12.webp"
+            ]
+        }
+    ]
+}

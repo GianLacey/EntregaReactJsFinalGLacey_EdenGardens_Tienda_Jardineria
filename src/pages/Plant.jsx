@@ -1,17 +1,17 @@
 
 import { useEffect } from 'react';
-import { ItemListContainer } from '../components/ItemsListContainer/ItemListContainer';
-import { useGetProducts } from '../hooks/useProducts';
+import { ItemListContainer } from '../components/ItemListContainer';
+import { getProducts } from '../components/getProducts.js';
 
 export const Plant = () => {
 
   //titulo de mi page  
   useEffect(() => {
     document.title = "Plantas"
-  })  
+  })
 
-  const { productsData } = useGetProducts(6);
+  const { plants } = getProducts();
   return (
-    <ItemListContainer greeting='Plantas' productsData= { productsData } />
+    <ItemListContainer greeting='Plantas' products={plants} />
   )
 }
