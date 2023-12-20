@@ -24,17 +24,17 @@ export const ItemDetails = ( {product} ) => {
                 
                 <div className=" w-full sm:w-96 md:w-8/12  lg:w-6/12 flex lg:flex-row flex-col lg:gap-8 sm:gap-6 gap-4">
                     <div className=" w-full lg:w-8/12 bg-gray-100 flex justify-center items-center">
-                        <img src={product.thumbnail} alt="Wooden Chair Previw" />
+                        <img src={product.thumbnail} alt="plant"/>
                     </div>
-                    <div className=" w-full lg:w-4/12 grid lg:grid-cols-1 sm:grid-cols-4 grid-cols-2 gap-6">
-                        <div className="bg-gray-100 flex justify-center items-center py-4">
-                            <img src="https://i.ibb.co/0jX1zmR/sam-moqadam-kvmds-Tr-GOBM-unsplash-removebg-preview-1-1.png" alt="Wooden chair - preview 1" />
+                    <div className="w-full lg:w-4/12 grid lg:grid-cols-1 sm:grid-cols-4 grid-cols-2 gap-6">
+                        <div className="bg-gray-100 flex object-contain w-full h-full justify-center items-center p-0">
+                            <img src={product.thumbnail} />
                         </div>
-                        <div className="bg-gray-100 flex justify-center items-center py-4">
-                            <img src="https://i.ibb.co/7zv1N5Q/sam-moqadam-kvmds-Tr-GOBM-unsplash-removebg-preview-2.png" alt="Wooden chair - preview 2" />
+                        <div className="bg-gray-100 flex object-contain w-full h-full justify-center items-center p-0">
+                            <img src={product.images[0]} />
                         </div>
-                        <div className="bg-gray-100 flex justify-center items-center py-4">
-                            <img src="https://i.ibb.co/0jX1zmR/sam-moqadam-kvmds-Tr-GOBM-unsplash-removebg-preview-1-1.png" alt="Wooden chair- preview 3" />
+                        <div className="bg-gray-100 flex object-contain w-full h-full justify-center items-center p-0">
+                            <img src={product.images[1]} />
                         </div>
                     </div>
                 </div>

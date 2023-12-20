@@ -9,6 +9,7 @@ export default {
       }
     },
     fontSize: {
+      xxsm: '0.5rem',
       xxs: '0.6rem',
       xs: '11.7px',
       xsmed: '14px',
@@ -23,7 +24,8 @@ export default {
     fontFamily: {
       'segoeui': ['Tahoma, Verdana, sans-serif'],
       'franklin': ['Franklin Gothic Medium, Arial Narrow, Arial, sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif'],
-      'monserrat': ['Montserrat, sans-serif']
+      'monserrat': ['Montserrat, sans-serif'],
+      'outfit': ['Outfit, sans-serif']
     },
     backgroundImage: {
       'main-img': "url(https://img3.wallspic.com/previews/8/9/2/3/0/103298/103298-verano-entorno_natural-la_vegetacion-ecosistema-la_reserva_natural_de-x750.jpg)",
