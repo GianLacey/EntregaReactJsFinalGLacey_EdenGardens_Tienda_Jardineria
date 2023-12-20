@@ -1,13 +1,16 @@
 
-import './App.css';   
+import { BrowserRouter } from 'react-router-dom';
+import './App.css';
 import MainLayout from './layouts/MainLayout';
 import { MainRouter } from './router/MainRouter';
- 
+
 function App() {
   return (
-    <MainLayout> 
-      <MainRouter />
-    </MainLayout>
+    <BrowserRouter>
+      <MainLayout>
+        <MainRouter />
+      </MainLayout>
+    </BrowserRouter>
   )
 }
 

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 export const NavBar = () => {
     const list = "flex text-xxs font-segoeui text-sm/[17px] uppercase ml-2";
@@ -8,6 +9,10 @@ export const NavBar = () => {
     const navShop = ["Plantas", "Semillas", "Masetas", "Herramientas", "Maquinas"];
 
     const [isSearchFocused, setIsSearchFocused] = useState(false);
+
+    function quitarEspacios(texto) {
+        return texto.replace(/\s/g, '');
+    }
 
     const handleFocus = () => {
         setIsSearchFocused(true);
@@ -56,7 +61,7 @@ export const NavBar = () => {
                                         key={index}
                                         className={`${listItem} text-gray-200 ${index === navInfo.length - 1 ? 'border-none' : 'border-r-[1px]'}`}
                                     >
-                                        {item}
+                                        <Link to={`/${quitarEspacios(item.toLowerCase())}`}>{item}</Link>
                                     </li>
                                 ))}
                             </ul>
@@ -65,16 +70,16 @@ export const NavBar = () => {
 
                     <div className="p-5 flex border-b-[1px] w-full border-lime-700/40">
                         <div>
-                            <img className="w-28" src="../src/assets/logos/eden_gardens_logo.webp" alt="logo-page" />
+                            <Link to='/'><img className="w-28" src="../src/assets/logos/eden_gardens_logo.webp" alt="logo-page" /></Link>
                         </div>
 
                         <div className="flex flex-1 items-center justify-between sm:justify-end font-segoeui me-12 text-gray-500 font-medium text-xsmed">
                             <div className="me-4">
-                                <img className="w-5 mx-auto mb-2" src="./src/assets/icons/whatsapp-logo-2449.svg" alt="wsp" />
+                                <img className="w-5 mx-auto mb-2" src="../src/assets/icons/whatsapp-logo-2449.svg" alt="wsp" />
                                 <p>2326-353453</p>
                             </div>
                             <div>
-                                <img className="w-5 mx-auto mb-2" src="./src/assets/icons/instagram-logo-8869.svg" alt="intagram" />
+                                <img className="w-5 mx-auto mb-2" src="../src/assets/icons/instagram-logo-8869.svg" alt="intagram" />
                                 <p>@company</p>
                             </div>
 
@@ -87,7 +92,7 @@ export const NavBar = () => {
                                     key={index}
                                     className={`${listItem} text-gray-500 ${index === navShop.length - 1 ? 'border-none' : 'border-r-[1px]'}`}
                                 >
-                                    {item}
+                                    <Link to={`/${item.toLowerCase()}`}>{item}</Link>
                                 </li>
                             ))}
                         </ul>
