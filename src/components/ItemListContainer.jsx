@@ -18,7 +18,7 @@ export const ItemListContainer = (props) => {
 
     return (
         <div className="block  mt-10">
-            <p className="uppercase text-center font-franklin text-5xl text-lime-700">{props.greeting}</p>
+            <p className="uppercase ml-2 font-franklin text-center text-2xl text-green-primary">{props.greeting}</p>
 
             <ItemList products = {products}/>
 

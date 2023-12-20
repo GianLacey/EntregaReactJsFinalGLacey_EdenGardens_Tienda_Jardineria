@@ -4,12 +4,12 @@ export const Footer = () => {
     return (
         <footer className="mt-52 text-center relative font-monserrat">
             <div className="absolute top-[-210px] w-full z-10">
-                <div className="absolute right-20 rounded-2xl h-52 p-10 w-5/6 text-center text-white bg-green-600">
+                <div className="absolute right-20 rounded-2xl h-52 p-10 w-5/6 text-center text-white bg-green-fluo">
                     <h2 className="mb-8 text-2xl">Sumate al Newsletter</h2>
                     <div className="flex justify-center items-center">
                         <input type="text" placeholder="Nombre" className="w-44 bg-white border-none mr-2 px-3 py-4 h-4 text-xxs" />
                         <input type="email" placeholder="Correo electrónico" className="w-44 bg-white mr-2 px-3 py-4 border-none h-4 text-xxs" />
-                        <button type="submit" className="flex px-3 py-4 w-44 items-center justify-center h-4 border border-gray-500 text-gray-700 rounded rounded-3 bg-transparent text-xs">
+                        <button type="submit" className="flex px-3 py-4 w-44 items-center justify-center h-4 border border-gray-500 text-gray-600 rounded rounded-3 bg-transparent text-xs">
                             SUSCRIBIRSE
                         </button>
                     </div>
@@ -41,9 +41,10 @@ export const Footer = () => {
                 </div>
             </section>
 
-            <section className="bg-slate-100 py-6 text-xs mt-10">
-                <h3 className="text-green-600 text-16">Arrepentimiento de compra</h3>
-                <p>Iniciá tu gestión <strong><a href="#" className="text-green-600">aquí</a></strong></p>
+            <section className="bg-slate-100 py-6 text-xs">
+                <h3 className="text-green-fluo text-16">Arrepentimiento de compra</h3>
+                <p>Iniciá tu gestión <strong><a href="#" className="text-green-fluo">aquí</a></strong></p>
+
             </section>
 
             <section className="bg-white p-6 flex items-center justify-between">

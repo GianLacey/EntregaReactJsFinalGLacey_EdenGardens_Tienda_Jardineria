@@ -2,7 +2,12 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,jsx}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'green-primary': '#538653',
+        'green-fluo': '#54b854',
+      }
+    },
     fontSize: {
       xxs: '0.6rem',
       xs: '11.7px',
@@ -21,14 +26,17 @@ export default {
       'monserrat': ['Montserrat, sans-serif']
     },
     backgroundImage: {
-      'main-img': "url(https://media.admagazine.com/photos/618a64f9b67f79aa891ed98e/master/w_1600%2Cc_limit/71307.jpg)",
+      'main-img': "url(https://img3.wallspic.com/previews/8/9/2/3/0/103298/103298-verano-entorno_natural-la_vegetacion-ecosistema-la_reserva_natural_de-x750.jpg)",
       'main-img-dos': "url(https://media.istockphoto.com/id/1309357895/es/v%C3%ADdeo/alejar-la-vista-a%C3%A9rea-del-hermoso-fondo-de-textura-del-patio-de-hierba-verde-%C3%A1ngulo-de-la.jpg?s=640x640&k=20&c=dyibViaiLVB9LlQhLnjKMZgk4rWla1EnEzi6fC8pjwk=)",
       'linear-gradient': 'linear-gradient(to left, rgba(175, 214, 175, 0.86), rgba(83, 134, 83, 0.86), rgba(59, 75, 59, 0.86))',
     },
     sepia: {
       25: '.25',
+      35: '35',
+      50: '50',
       75: '.75'
-    }
+    },
+    
 
   },
   plugins: [],

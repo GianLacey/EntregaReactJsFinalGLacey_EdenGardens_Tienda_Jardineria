@@ -2,3 +2,14 @@
   margin: 0;
   padding: 0;
 }
+
+.container-publicity::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: inherit;
+  background: linear-gradient(to left,rgba(175, 214, 175, 0.86), rgba(83, 134, 83, .86), rgba(59, 75, 59, 0.86));    
+}

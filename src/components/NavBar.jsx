@@ -26,7 +26,7 @@ export const NavBar = () => {
         <div>
             <header className="bg-gray-50">
                 <div className="">
-                    <div className="flex items-center p-1 bg-lime-900">
+                    <div className="flex items-center p-1 bg-green-primary">
                         <div className="max-w-2xl mx-auto">
                             <form>
                                 <label className="mb-2 text-xxs font-medium text-gray-100 sr-only dark:text-gray-300">Search</label>
