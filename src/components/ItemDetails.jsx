@@ -1,9 +1,13 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
+import { CartContext } from '../context/CartContext';
 
 export const ItemDetails = ( {product} ) => {
     
-    const [rotate, setRotate] = useState(false);
-    const [count, setCount] = useState(0);
+    const { cart, setCart } = useContext(CartContext);
+
+    console.log(cart);
+
+    const [count, setCount] = useState(1);
 
     const addCount = () => {
         setCount((prev) => prev + 1);
@@ -14,6 +18,22 @@ export const ItemDetails = ( {product} ) => {
             setCount((prev) => prev - 1);
         }
     };
+
+    const confirmBuy = () => {
+
+        const productAdd = {...product, count};
+
+        const newCart = [...cart];
+        const inCart = newCart.find((product)=> product.id === productAdd.id);
+
+        if(inCart) {
+            inCart.count += count;
+        } else {
+            newCart.push(productAdd);
+        }
+
+        setCart(newCart);
+    }
 
   return (
     <div>
@@ -49,7 +69,9 @@ export const ItemDetails = ( {product} ) => {
                                 <span onClick={minusCount} className="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 cursor-pointer border border-gray-300 border-r-0 w-7 h-7 flex items-center justify-center pb-1">
                                     -
                                 </span>
+
                                 <input id="counter" aria-label="input" className="border border-gray-300 h-full text-center w-14 pb-1" type="text" value={count} onChange={(e) => e.target.value} />
+
                                 <span onClick={addCount} className="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 cursor-pointer border border-gray-300 border-l-0 w-7 h-7 flex items-center justify-center pb-1 ">
                                     +
                                 </span>
@@ -61,7 +83,7 @@ export const ItemDetails = ( {product} ) => {
                         <p className="font-semibold text-xl flex items-center justify-between pr-4 leading-5 text-gray-800 lg:mt-8 mt-9">Caracteristicas <img className='w-10' src="https://www.svgrepo.com/show/414047/plant.svg" alt="plant" /></p>
                         <p className="text-normal text-base leading-6 text-gray-600 mt-4">{product.description}</p>
                     </div>
-                    <button className="focus:outline-none focus:ring-2 hover:bg-green-fluo focus:ring-offset-2 focus:ring-gray-800 font-medium text-base leading-4 text-white bg-green-primary w-full py-5 lg:mt-4 mt-6">Confirmar compra</button>
+                    <button onClick={confirmBuy} className="focus:outline-none focus:ring-2 hover:bg-green-fluo focus:ring-offset-2 focus:ring-gray-800 font-medium text-base leading-4 text-white bg-green-primary w-full py-5 lg:mt-4 mt-6">Confirmar compra</button>
                 </div>
 
             </div>
