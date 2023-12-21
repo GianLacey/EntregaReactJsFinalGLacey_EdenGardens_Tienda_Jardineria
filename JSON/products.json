@@ -15,12 +15,13 @@
         {
             "id": 2,
             "title": "Taxodium Distichum (Ciprés Calvo)",
-            "description": "El Ciprés Calvo (Taxodium) es un árbol único es una elección excepcional para aquellos que buscan agregar elegancia y belleza natural a su paisaje. Con su distintiva forma piramidal y su follaje exuberante, el Ciprés Calvo es un símbolo de serenidad y encanto atemporal. Es de hoja caduca, es decir que sus hojas caen en otoño para dejar entrar la luz solar y brotan nuevamente en primavera y verano para dar sombra. Es uno de los cipreces de hoja caduca mas conocido y es por eso que es uno de los mas elegidos.",
+            "description": "El Ciprés Calvo es un símbolo de serenidad y encanto atemporal. Es de hoja caduca, es decir que sus hojas caen en otoño para dejar entrar la luz solar y brotan nuevamente en primavera y verano para dar sombra. Es uno de los cipreces de hoja caduca mas conocido y es por eso que es uno de los mas elegidos.",
             "price": 10000,
             "type": "Pino",
-            "thumbnail": "https://acdn.mitiendanube.com/stores/002/094/351/products/taxodium-distichum1-91a54ce75af42e7c8616891284606564-1024-1024.webp",
+            "thumbnail": 
+            "https://http2.mlstatic.com/D_NQ_NP_994945-MLA40063197237_122019-O.webp",
             "images": [
-                "https://acdn.mitiendanube.com/stores/002/094/351/products/cipres-calvo-021-a080323c6d6831b81416891284604423-640-0.webp"
+                "https://acdn.mitiendanube.com/stores/002/094/351/products/cipres-calvo-021-a080323c6d6831b81416891284604423-640-0.webp","https://acdn.mitiendanube.com/stores/002/094/351/products/taxodium-distichum1-91a54ce75af42e7c8616891284606564-1024-1024.webp"
             ]
         },
         {
@@ -29,9 +30,9 @@
             "description": "El Ginkgo Biloba es apreciado en todo el mundo por su inigualable valor ornamental. Su atractivo radica en su estructura única y su follaje distintivo. Este árbol de hoja caduca presenta hojas en forma de abanico, que se despliegan en un verde brillante durante la primavera y el verano, adquiriendo un hermoso tono dorado en el otoño.",
             "price": 15000,
             "type": "Arbol",
-            "thumbnail": "https://acdn.mitiendanube.com/stores/002/094/351/products/beneficios-ginkgo-biloba1-602f6586190cdd8afc16856653461237-640-0.webp",
+            "thumbnail":"https://www.vdberk.es/media/Bomen/GIBILOBA/Ginkgo%20biloba-s%2045-50.jpg", 
             "images": [
-                "https://acdn.mitiendanube.com/stores/002/094/351/products/ginkgo-biloba-20401-3be9f3e770f371ecb416856653460874-640-0.webp",
+                "https://acdn.mitiendanube.com/stores/002/094/351/products/beneficios-ginkgo-biloba1-602f6586190cdd8afc16856653461237-640-0.webp",
                 "https://acdn.mitiendanube.com/stores/002/094/351/products/ginkgo-biloba-gingo-o-ginko1-a900ce0ee1fe0e00b916856653462368-640-0.webp"
             ]
         }
