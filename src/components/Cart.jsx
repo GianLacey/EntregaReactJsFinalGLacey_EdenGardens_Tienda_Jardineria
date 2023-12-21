@@ -81,13 +81,16 @@ export const Cart = () => {
 
                                                 </ul>
                                             </div>
-                                            
+
                                         </div>
-                                        
+
                                     </div>
-                                    <div className="flex justify-end text-sm">
-                                                <button type="button" className="font-medium mr-6 mb-1 text-green-primary hover:text-green-fluo">Vaciar carrito</button>
-                                            </div>
+                                    {cart.lenght > 0 &&
+                                        <div className="flex justify-end text-sm">
+                                            <button type="button" className="font-medium mr-6 mb-1 text-green-primary hover:text-green-fluo">Vaciar carrito</button>
+                                        </div>
+                                    }
+
                                     <div className="border-t border-gray-200 px-4 py-6 sm:px-6">
                                         <div className="flex justify-between text-base font-medium text-gray-900">
                                             <p>Total</p>
