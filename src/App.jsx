@@ -26,8 +26,12 @@ function App() {
     setCart(newCart);
   }
 
+  const countCart = () => {
+    return cart.reduce((acc, prod) => acc + prod.count, 0);
+  }
+
   return (
-    <CartContext.Provider value={ {cart, confirmBuy} }>
+    <CartContext.Provider value={ {cart, confirmBuy, countCart} }>
       <BrowserRouter>
         <MainLayout>
           <MainRouter />
