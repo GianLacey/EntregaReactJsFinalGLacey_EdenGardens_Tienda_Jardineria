@@ -3,7 +3,7 @@ import { CartContext } from '../context/CartContext';
 
 export const ItemDetails = ( {product} ) => {
     
-    const { cart, setCart } = useContext(CartContext);
+    const { cart, confirmBuy } = useContext(CartContext);
 
     console.log(cart);
 
@@ -19,21 +19,7 @@ export const ItemDetails = ( {product} ) => {
         }
     };
 
-    const confirmBuy = () => {
-
-        const productAdd = {...product, count};
-
-        const newCart = [...cart];
-        const inCart = newCart.find((product)=> product.id === productAdd.id);
-
-        if(inCart) {
-            inCart.count += count;
-        } else {
-            newCart.push(productAdd);
-        }
-
-        setCart(newCart);
-    }
+    
 
   return (
     <div>
@@ -83,7 +69,7 @@ export const ItemDetails = ( {product} ) => {
                         <p className="font-semibold text-xl flex items-center justify-between pr-4 leading-5 text-gray-800 lg:mt-8 mt-9">Caracteristicas <img className='w-10' src="https://www.svgrepo.com/show/414047/plant.svg" alt="plant" /></p>
                         <p className="text-normal text-base leading-6 text-gray-600 mt-4">{product.description}</p>
                     </div>
-                    <button onClick={confirmBuy} className="focus:outline-none focus:ring-2 hover:bg-green-fluo focus:ring-offset-2 focus:ring-gray-800 font-medium text-base leading-4 text-white bg-green-primary w-full py-5 lg:mt-4 mt-6">Confirmar compra</button>
+                    <button onClick={() => { confirmBuy(product, count)}} className="focus:outline-none focus:ring-2 hover:bg-green-fluo focus:ring-offset-2 focus:ring-gray-800 font-medium text-base leading-4 text-white bg-green-primary w-full py-5 lg:mt-4 mt-6">Confirmar compra</button>
                 </div>
 
             </div>
