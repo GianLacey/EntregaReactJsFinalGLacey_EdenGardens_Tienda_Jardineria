@@ -15,6 +15,7 @@ function App() {
     const productAdd = {...product, count};
 
     const newCart = [...cart];
+
     const inCart = newCart.find((product)=> product.id === productAdd.id);
 
     if(inCart) {
@@ -30,8 +31,16 @@ function App() {
     return cart.reduce((acc, prod) => acc + prod.count, 0);
   }
 
+  const totalPrice = () => {
+    return cart.reduce((acc, prod) => acc + prod.price * prod.count, 0);
+  }
+
+  const clearCart = () => {
+    setCart([]);
+  }
+
   return (
-    <CartContext.Provider value={ {cart, confirmBuy, countCart} }>
+    <CartContext.Provider value={ {cart, confirmBuy, countCart, totalPrice, clearCart} }>
       <BrowserRouter>
         <MainLayout>
           <MainRouter />
