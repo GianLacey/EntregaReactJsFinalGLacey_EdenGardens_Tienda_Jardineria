@@ -48,10 +48,10 @@ export const Cart = () => {
 
                                         <div className="mt-8">
                                             <div className="flow-root">
-                                                <ul role="list" className="-my-6 divide-y divide-gray-200">
+                                                <ul className="-my-6 divide-y divide-gray-200">
                                                     {
                                                         cart.map((prod) => (
-                                                            <li className="flex py-6">
+                                                            <li key={prod.id} className="flex py-6">
                                                                 <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
                                                                     <img src={prod.thumbnail} className="h-full w-full object-cover object-center" />
                                                                 </div>
@@ -85,11 +85,11 @@ export const Cart = () => {
                                         </div>
 
                                     </div>
-                                    {cart.lenght > 0 &&
-                                        <div className="flex justify-end text-sm">
-                                            <button type="button" className="font-medium mr-6 mb-1 text-green-primary hover:text-green-fluo">Vaciar carrito</button>
-                                        </div>
-                                    }
+
+                                    <div className="flex justify-end text-sm">
+                                        <button type="button" className="font-medium mr-6 mb-1 text-green-primary hover:text-green-fluo" onClick={clearCart}>Vaciar carrito</button>
+                                    </div>
+
 
                                     <div className="border-t border-gray-200 px-4 py-6 sm:px-6">
                                         <div className="flex justify-between text-base font-medium text-gray-900">
