@@ -1,7 +1,6 @@
 
 import { useEffect } from 'react';
-import { ItemListContainer } from '../components/ItemListContainer';
-import { getProducts } from '../components/getProducts.js';
+import { AsideFilter } from '../components/AsideFilter';
 
 export const Plant = () => {
 
@@ -10,8 +9,7 @@ export const Plant = () => {
     document.title = "Plantas"
   })
 
-  const { plants } = getProducts();
   return (
-    <ItemListContainer greeting='Plantas' products={plants} />
+    <AsideFilter greeting='Plantas'/>
   )
 }

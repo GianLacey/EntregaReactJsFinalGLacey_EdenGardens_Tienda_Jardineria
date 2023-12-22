@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import { getProducts } from "./getProducts";
 import { ItemList } from "./ItemList";
 
-export const ItemListContainer = (props) => {
+
+export const ItemListContainer = () => {
 
     const [products, setProducts] = useState([]);
 
@@ -17,9 +18,8 @@ export const ItemListContainer = (props) => {
 
 
     return (
-        <div className="block  mt-10">
-            <p className="uppercase ml-2 font-franklin text-center text-2xl text-green-primary">{props.greeting}</p>
-
+        <div>
+            
             <ItemList products = {products}/>
 
         </div>
