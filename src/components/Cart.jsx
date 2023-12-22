@@ -1,34 +1,31 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { CartContext } from '../context/CartContext'
 
 export const Cart = () => {
 
-    const { cart, totalPrice, clearCart } = useContext(CartContext);
+    const { cart, totalPrice, clearCart, cartVisible, closeCart } = useContext(CartContext);
+
+    useEffect(() => {
+        const EscKey = (event) => {
+            if(event.key === 'Escape') {
+                closeCart();           
+            }
+        };
+        document.addEventListener('keydown', EscKey);
+        
+        return () => document.removeEventListener('keydown', EscKey);
+
+    }, [cartVisible, closeCart]);
 
     return (
-        <div>
-            <div className="relative z-10" aria-labelledby="slide-over-title" role="dialog" aria-modal="true">
-                {/* Background backdrop, show/hide based on slide-over state.
+        <div className={`z-40 ${cartVisible ? 'fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity' : 'hidden'}`} >
+            <div className={`cart-container ${cartVisible ? 'block' : 'hidden'} relative z-50`} aria-labelledby="slide-over-title" role="dialog" aria-modal="true">
+                
+                <div className="inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
 
-                Entering: "ease-in-out duration-500"
-                From: "opacity-0"
-                To: "opacity-100"
-                Leaving: "ease-in-out duration-500"
-                From: "opacity-100"
-                To: "opacity-0" */}
-                <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
-
-                <div className="fixed inset-0 overflow-hidden">
-                    <div className="absolute inset-0 overflow-hidden">
+                <div className="inset-0 overflow-hidden">
+                    <div className=" inset-0 overflow-hidden">
                         <div className="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
-                            {/*  Slide-over panel, show/hide based on slide-over state.
-
-                            Entering: "transform transition ease-in-out duration-500 sm:duration-700"
-                                From: "translate-x-full"
-                                To: "translate-x-0"
-                            Leaving: "transform transition ease-in-out duration-500 sm:duration-700"
-                                From: "translate-x-0"
-                                To: "translate-x-full" */}
 
                             <div className="pointer-events-auto w-screen max-w-md">
                                 <div className="flex h-full flex-col overflow-y-scroll bg-white shadow-xl">

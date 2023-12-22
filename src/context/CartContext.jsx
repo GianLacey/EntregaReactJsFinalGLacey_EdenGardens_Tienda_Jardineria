@@ -1,5 +1,4 @@
-import { createContext, useEffect, useState } from "react";
-import { json } from "react-router-dom";
+import { createContext, useContext, useEffect, useState } from "react";
 
 
 export const CartContext = createContext();
@@ -39,7 +38,31 @@ export const CartProvider = ({ children }) => {
         setCart([]);
     }
 
-    useEffect(()=> {
+
+    const [cartVisible, setCartVisible] = useState(false);
+
+    const toggleCart = () => setCartVisible(!cartVisible);
+    
+    
+    const closeCart = () => setCartVisible(false);
+    
+    useEffect(() => {
+        const outsideClick = (event) => {
+
+            const cartContainer = event.target.closest('.cart-container');
+
+            if(!cartContainer) {
+                closeCart();
+            }
+        };
+        document.addEventListener('click', outsideClick);
+
+        return () => {
+            document.removeEventListener('click', outsideClick);
+        }
+    }, [cartVisible, closeCart])
+
+    useEffect(() => {
         localStorage.setItem("cart", JSON.stringify(cart))
     }, [cart])
 
@@ -50,7 +73,10 @@ export const CartProvider = ({ children }) => {
                 addCart,
                 countCart,
                 totalPrice,
-                clearCart
+                clearCart,
+                cartVisible,
+                toggleCart,
+                closeCart
             }
         }>
             {children}

@@ -23,11 +23,11 @@ export const ItemDetails = ( {product} ) => {
 
   return (
     <div>
-       <div className="sm:container 2xl:mx-auto lg:py-0 lg:px-20 md:py-12 md:px-6 py-9 px-4 ">
+       <div className="sm:container 2xl:mx-auto lg:py-0 lg:px-20 md:py-12 md:px-6 py-9 px-4">
             <div className="flex justify-center lg:flex-row flex-col gap-8">
                 <div className=" w-full sm:w-96 md:w-8/12  lg:w-4/12 flex lg:flex-row flex-col lg:gap-8 sm:gap-6 gap-4">
                     <div className=" w-full h-full lg:w-9/12 bg-gray-100 flex justify-center items-center">
-                        <img src={product.thumbnail} alt="Previw" />
+                        <img src={product.thumbnail} alt="Preview"/>
                     </div>
                     <div className=" w-full lg:w-24 grid lg:grid-cols-1 sm:grid-cols-4 grid-cols-2 gap-6">
                         <div className="bg-gray-100 flex justify-center items-center py-4">

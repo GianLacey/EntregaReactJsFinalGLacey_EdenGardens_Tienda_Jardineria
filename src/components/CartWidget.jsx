@@ -4,11 +4,19 @@ import { CartContext } from '../context/CartContext'
 
 export const CartWidget = () => {
 
-    const { countCart } = useContext(CartContext);
+    const { countCart, toggleCart, cartVisible } = useContext(CartContext);
+
+    const click = (e) => {
+        e.stopPropagation();
+        toggleCart();
+    };
+
+
+    console.log('cartVisible', cartVisible);
 
     return (
         <div>
-            <Link to="/cart">
+            <button onClick={click}>
                 <div className="relative">
                     <div className="absolute bottom-0 left-4">
                         <p className="flex h-4 w-3 items-center justify-center font-semibold rounded-full bg-red-500 p-1.5 text-xxs text-white">{countCart()}</p>
@@ -18,7 +26,7 @@ export const CartWidget = () => {
                     </svg>
 
                 </div>
-            </Link>
+            </button>
         </div>
     )
 }

@@ -19,7 +19,7 @@ export const Main = () => {
                             </span>
                         </button>
                     </div>
-                    <div className="z-50 w-96 h-full bg-white opacity-20 absolute right-10 top-0"></div>
+                    <div className="z-30 w-96 h-full bg-white opacity-20 absolute right-10 top-0"></div>
                 </section>
 
                 <section>
