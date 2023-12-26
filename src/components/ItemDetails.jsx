@@ -15,7 +15,7 @@ export const ItemDetails = ( {product} ) => {
 
     const minusCount = () => {
         if (count > 0) {
-            setCount((prev) => prev - 1);
+            count > 1 && setCount((prev) => prev - 1);
         }
     };
 
