@@ -2,12 +2,10 @@
 import { useEffect } from 'react';
 
 import { ItemListContainer } from '../components/ItemListContainer';
-import { getProducts } from '../components/getProducts.js';
 
 export const Plant = (props) => {
 
-  const { plants } = getProducts();
-
+  const productType = 'plants';
   //titulo de mi page  
   useEffect(() => {
     document.title = "Plantas"
@@ -208,7 +206,7 @@ export const Plant = (props) => {
                 </form>
 
                 <div className="lg:col-span-3">
-                  <ItemListContainer products={plants}/>
+                  <ItemListContainer productType={productType}/>
                 </div>
               </div>
             </section>

@@ -1,9 +1,13 @@
 
 import data from "../../JSON/products.json"
 
-export const getProducts = () => {
+export const getProducts = (productType) => {
     return new Promise((resolve, reject) => {
-        resolve(data.plants)
+        if(data.hasOwnProperty(productType)){
+            resolve(data[productType]);
+        } else {
+            reject(new Error(`Tipo de producto no válido: ${productType}`));
+        }
     })
 }
 
@@ -21,3 +25,4 @@ export const getProductById = (id) => {
         }
     })
 } 
+

@@ -6,7 +6,7 @@ import { getProducts } from '../components/getProducts.js';
 
 export const Seeds = (props) => {
 
-  const { plants } = getProducts();
+  const productType = 'seeds';
 
   //titulo de mi page  
   useEffect(() => {
@@ -208,7 +208,7 @@ export const Seeds = (props) => {
                 </form>
 
                 <div className="lg:col-span-3">
-                  <ItemListContainer products={plants} />
+                  <ItemListContainer productType={productType} />
                 </div>
               </div>
             </section>

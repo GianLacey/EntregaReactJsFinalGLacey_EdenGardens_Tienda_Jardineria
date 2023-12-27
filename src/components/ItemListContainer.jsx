@@ -3,18 +3,21 @@ import { getProducts } from "./getProducts";
 import { ItemList } from "./ItemList";
 
 
-export const ItemListContainer = () => {
+export const ItemListContainer = ({productType}) => {
 
     const [products, setProducts] = useState([]);
 
     
 
     useEffect(() => {
-        getProducts()
+        getProducts(productType)
             .then((res) => {
                 setProducts(res);
+            })
+            .catch((error) => {
+                console.error(error);
             });
-    }, [])
+    }, [productType])
 
 
     return (
