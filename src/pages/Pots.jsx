@@ -10,20 +10,20 @@ export const Pots = (props) => {
 
   //titulo de mi page  
   useEffect(() => {
-    document.title = "Plantas"
+    document.title = "Masetas | Eden Gardens | Tienda Online de artículos para huerta, jardinería y paisajismo "
   })
 
   return (
     <div>
       <div className="overflow-hidden h-52 w-full">
-        <img className='w-full opacity-90' src="https://acdn.mitiendanube.com/stores/002/094/351/categories/2-0047c1b3fbf9d510f916781545794064-1920-1920.png" alt="" />
+        <img className='w-full opacity-90 object-cover mt-[-470px]' src="../src/assets/img/fondo-pots.jpg" alt="" />
       </div>
       <div className="bg-white">
         <div>
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-0">
 
             <div className="flex items-baseline justify-between border-b border-gray-200 pb-6 pt-4">
-              <h1 className="tracking-tight text-gray-900"><p className="uppercase ml-2 font-franklin text-center text-2xl text-green-primary">{props.greeting}</p></h1>
+              <h1 className="tracking-tight text-gray-900"><p className="capitalize ml-2 font-franklin text-center text-2xl text-green-primary">{props.greeting}</p></h1>
 
               <div className="flex items-center lg:px-2">
                 <div className="relative inline-block text-left">

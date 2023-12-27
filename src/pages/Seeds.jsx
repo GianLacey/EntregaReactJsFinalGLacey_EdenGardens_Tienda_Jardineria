@@ -10,20 +10,20 @@ export const Seeds = (props) => {
 
   //titulo de mi page  
   useEffect(() => {
-    document.title = "Plantas"
+    document.title = "Semillas - Plantines | Eden Gardens | Tienda Online de artículos para huerta, jardinería y paisajismo "
   })
 
   return (
     <div>
       <div className="overflow-hidden h-52 w-full">
-        <img className='w-full opacity-90' src="https://acdn.mitiendanube.com/stores/002/094/351/categories/2-0047c1b3fbf9d510f916781545794064-1920-1920.png" alt="" />
+        <img className='w-full opacity-90 object-cover mt-[-270px]' src="../src/assets/img/fondo-seeds.jpg" alt="" />
       </div>
       <div className="bg-white">
         <div>
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-0">
 
             <div className="flex items-baseline justify-between border-b border-gray-200 pb-6 pt-4">
-              <h1 className="tracking-tight text-gray-900"><p className="uppercase ml-2 font-franklin text-center text-2xl text-green-primary">{props.greeting}</p></h1>
+              <h1 className="tracking-tight text-gray-900"><p className="capitalize ml-2 font-franklin text-center text-2xl text-green-primary">{props.greeting}</p></h1>
 
               <div className="flex items-center lg:px-2">
                 <div className="relative inline-block text-left">
@@ -38,14 +38,13 @@ export const Seeds = (props) => {
 
 
                   <div className="absolute right-0 z-10 mt-2 w-40 origin-top-right rounded-md bg-white shadow-2xl ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabIndex="-1">
-                    <div className="py-1 hidden" role="none">
+                    <div className="py-1 block" role="none">
 
                       <a href="#" className="font-medium text-gray-900 block px-4 py-2 text-sm" role="menuitem" tabIndex="-1" id="menu-item-0">Mas comprado</a>
                       <a href="#" className="text-gray-500 block px-4 py-2 text-sm" role="menuitem" tabIndex="-1" id="menu-item-2">En oferta</a>
                       <a href="#" className="text-gray-500 block px-4 py-2 text-sm" role="menuitem" tabIndex="-1" id="menu-item-3">Precio: Menor a mayor</a>
                       <a href="#" className="text-gray-500 block px-4 py-2 text-sm" role="menuitem" tabIndex="-1" id="menu-item-4">Precio: Mayor a menor</a>
-                      <a href="#" className="text-gray-500 block px-4 py-2 text-sm" role="menuitem" tabIndex="-1" id="menu-item-3">Tamaño: Chico</a>
-                      <a href="#" className="text-gray-500 block px-4 py-2 text-sm" role="menuitem" tabIndex="-1" id="menu-item-4">Tamaño: Grande</a>
+                      
                     </div>
                   </div>
                 </div>
@@ -77,10 +76,10 @@ export const Seeds = (props) => {
                       <a href="#" className="text-green-primary">Todas</a>
                     </li>
                     <li>
-                      <a href="#">Interior</a>
+                      <a href="#">Organicas</a>
                     </li>
                     <li>
-                      <a href="#">Exterior</a>
+                      <a href="#">Convencionales</a>
                     </li>
                   </ul>
 
@@ -102,36 +101,29 @@ export const Seeds = (props) => {
                       <div className="space-y-4 ">
                         <div className="flex items-center">
                           <input id="filter-color-0" name="color[]" value="white" type="checkbox" className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-green-primary" />
-                          <label htmlFor="filter-color-0" className="ml-3 text-sm text-gray-600">Arboles</label>
+                          <label htmlFor="filter-color-0" className="ml-3 text-sm text-gray-600">Hortalizas de hoja</label>
                         </div>
                         <div className="flex items-center">
                           <input id="filter-color-1" name="color[]" value="beige" type="checkbox" className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-green-primary" />
-                          <label htmlFor="filter-color-1" className="ml-3 text-sm text-gray-600">Arbustos</label>
+                          <label htmlFor="filter-color-1" className="ml-3 text-sm text-gray-600">Hortalizas de raíz</label>
                         </div>
                         <div className="flex items-center">
                           <input id="filter-color-1" name="color[]" value="beige" type="checkbox" className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-green-primary" />
-                          <label htmlFor="filter-color-1" className="ml-3 text-sm text-gray-600">Palmera</label>
+                          <label htmlFor="filter-color-1" className="ml-3 text-sm text-gray-600">Árboles Frutales</label>
                         </div>
                         <div className="flex items-center">
                           <input id="filter-color-1" name="color[]" value="beige" type="checkbox" className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-green-primary" />
-                          <label htmlFor="filter-color-1" className="ml-3 text-sm text-gray-600">Tropicales</label>
+                          <label htmlFor="filter-color-1" className="ml-3 text-sm text-gray-600">Hierbas Aromáticas</label>
                         </div>
                         <div className="flex items-center">
                           <input id="filter-color-2" name="color[]" value="blue" type="checkbox" className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-green-primary" />
-                          <label htmlFor="filter-color-2" className="ml-3 text-sm text-gray-600">Suculentas y Cactus</label>
+                          <label htmlFor="filter-color-2" className="ml-3 text-sm text-gray-600">Flores Perennes</label>
                         </div>
                         <div className="flex items-center">
                           <input id="filter-color-3" name="color[]" value="brown" type="checkbox" className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-green-primary" />
-                          <label htmlFor="filter-color-3" className="ml-3 text-sm text-gray-600">Hierbas</label>
+                          <label htmlFor="filter-color-3" className="ml-3 text-sm text-gray-600">Flores Anuales</label>
                         </div>
-                        <div className="flex items-center">
-                          <input id="filter-color-4" name="color[]" value="green" type="checkbox" className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-green-primary" />
-                          <label htmlFor="filter-color-4" className="ml-3 text-sm text-gray-600">Plantas Nativas</label>
-                        </div>
-                        <div className="flex items-center">
-                          <input id="filter-color-5" name="color[]" value="purple" type="checkbox" className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-green-primary" />
-                          <label htmlFor="filter-color-5" className="ml-3 text-sm text-gray-600">Proximamente...</label>
-                        </div>
+                       
                       </div>
                     </div>
                   </div>
@@ -163,10 +155,7 @@ export const Seeds = (props) => {
                           <input id="filter-category-3" name="category[]" value="organization" type="checkbox" className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-green-primary" />
                           <label htmlFor="filter-category-3" className="ml-3 text-sm text-gray-600">Comestibles</label>
                         </div>
-                        <div className="flex items-center">
-                          <input id="filter-category-4" name="category[]" value="accessories" type="checkbox" className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-green-primary" />
-                          <label htmlFor="filter-category-4" className="ml-3 text-sm text-gray-600">Decoración</label>
-                        </div>
+                        
                       </div>
                     </div>
                   </div>

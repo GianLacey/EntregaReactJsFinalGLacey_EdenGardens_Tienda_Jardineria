@@ -7,7 +7,7 @@ export const NavBar = () => {
     const listItem = "mr-1 pr-1 border-r-[1px] border-gray-500";
 
     const navInfo = ["Sobre nosotros", "Contacto", "Sucursales", "Servicios", "Sustentable"];
-    const navShop = ["Plantas", "Semillas", "Masetas", "Herramientas", "Maquinas"];
+    const navShop = ["Plantas", "Semillas y Plantines", "Masetas", "Herramientas y Maquinas"];
 
     const [isSearchFocused, setIsSearchFocused] = useState(false);
 
@@ -60,7 +60,7 @@ export const NavBar = () => {
                                 {navInfo.map((item, index) => (
                                     <li
                                         key={index}
-                                        className={`${listItem} text-gray-200 ${index === navInfo.length - 1 ? 'border-none' : 'border-r-[1px]'}`}
+                                        className={`${listItem} text-gray-200 capitalize mr-1 ${index === navInfo.length - 1 ? 'border-none' : 'border-r-[1px]'}`}
                                     >
                                         <Link to={`/${quitarEspacios(item.toLowerCase())}`}>{item}</Link>
                                     </li>
@@ -91,7 +91,7 @@ export const NavBar = () => {
                             {navShop.map((item, index) => (
                                 <li
                                     key={index}
-                                    className={`${listItem} text-gray-500 ${index === navShop.length - 1 ? 'border-none' : 'border-r-[1px]'}`}
+                                    className={`${listItem} text-gray-500 pr-2 mr-2 capitalize ${index === navShop.length - 1 ? 'border-none' : 'border-r-[1px]'}`}
                                 >
                                     <Link to={`/${item.toLowerCase()}`}>{item}</Link>
                                 </li>

@@ -24,9 +24,9 @@ export const MainRouter = () => {
       <Route path='/servicios' element={<Services />}></Route>
       <Route path='/sustentable' element={<Sustainable />}></Route>
       <Route path='/plantas' element={<Plant greeting='Plantas'/>}> </Route>
-      <Route path='/semillas' element={<Seeds greeting='Semillas'/>}></Route>
+      <Route path='/semillas y plantines' element={<Seeds greeting='Semillas & Plantines'/>}></Route>
       <Route path='/masetas' element={<Pots greeting='Masetas' />}></Route>
-      <Route path='/herramientas' element={<Tools greeting='Herramientas' />}></Route>
+      <Route path='/herramientas y maquinas' element={<Tools greeting='Herramientas & Maquinas' />}></Route>
       <Route path='/maquinas' element={<Machines greeting='Maquinas' />}></Route>
       <Route path='/item/:id' element={<ItemDetailContainer />}></Route>
       <Route path='/cart' element={<Cart />}></Route>
