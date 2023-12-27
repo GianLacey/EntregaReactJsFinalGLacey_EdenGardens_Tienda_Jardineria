@@ -7,7 +7,7 @@ export const Main = () => {
             <main className='font-franklin'>
                 <section className="container-publicity relative h-96 bg-cover bg-center overflow-hidden bg-main-img">
                     <div className="text-white z-10 absolute left-10 top-10">
-                        <h2 className="text-5xl uppercase">eden garden</h2>
+                        <h2 className="text-5xl">Bienvenido</h2>
                         <h1 className="text-2xl font-light w-2/3">Tu tienda online de confianza en jardinería, paisajismo y horticultura.</h1>
                         <p className="text-lg fontMain">Regístrate y entérate primero de las novedades.</p>
                     </div>

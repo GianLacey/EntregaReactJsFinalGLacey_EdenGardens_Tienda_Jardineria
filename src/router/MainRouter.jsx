@@ -6,7 +6,6 @@ import { Cart } from '../components/Cart';
 import { Contact } from '../pages/Contact';
 import { Seeds } from '../pages/Seeds';
 import { Pots } from '../pages/Pots';
-import { Machines } from '../pages/Machines';
 import { Tools } from '../pages/Tools';
 import { Sustainable } from '../pages/Sustainable';
 import { Services } from '../pages/Services';
@@ -27,8 +26,7 @@ export const MainRouter = () => {
       <Route path='/semillas y plantines' element={<Seeds greeting='Semillas & Plantines'/>}></Route>
       <Route path='/masetas' element={<Pots greeting='Masetas' />}></Route>
       <Route path='/herramientas y maquinas' element={<Tools greeting='Herramientas & Maquinas' />}></Route>
-      <Route path='/maquinas' element={<Machines greeting='Maquinas' />}></Route>
-      <Route path='/item/:id' element={<ItemDetailContainer />}></Route>
+      <Route path='/item/:productType/:id' element={<ItemDetailContainer />}></Route>
       <Route path='/cart' element={<Cart />}></Route>
       
     </Routes>

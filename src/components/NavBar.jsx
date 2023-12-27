@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { CartWidget } from "./CartWidget";
 
@@ -22,6 +22,20 @@ export const NavBar = () => {
     const handleBlur = () => {
         setIsSearchFocused(false);
     };
+
+    const [isFixed, setIsFixed] = useState(false);
+
+    useEffect(() => {
+        const scrollFixed = () => {
+            const scrollPosition = window.scrollY || window.pageXOffset;
+            setIsFixed(scrollPosition >= 228)
+        }
+        window.addEventListener("scroll", scrollFixed);
+
+        return () => {
+            window.removeEventListener("scroll", scrollFixed);
+        }
+    }, []);
 
     return (
         <div>
@@ -69,7 +83,7 @@ export const NavBar = () => {
                         </div>
                     </div>
 
-                    <div className="p-5 flex border-b-[1px] w-full border-lime-700/40">
+                    <div className="p-5 flex border-b-[1px] w-full border-green-fluo/30">
                         <div>
                             <Link to='/'><img className="w-28" src="../src/assets/logos/eden_gardens_logo.webp" alt="logo-page" /></Link>
                         </div>
@@ -86,8 +100,9 @@ export const NavBar = () => {
 
                         </div>
                     </div>
-                    <div className="flex flex-1 items-center justify-between gap-8 sm:justify-start ">
-                        <ul className={`${list} mb-4 mt-5`}>
+                    <div className={`flex flex-1 items-center gap-8 sm:justify-start w-full bg-white ${isFixed ? "fixed top-0 z-50 transition delay-1000 duration-1000 ease-in-out" : ""}`}>
+                        <h2 className={`ml-11 font-monserrat font-bold text-green-primary ${isFixed ? "block" : "hidden"}`}>EDEN GARDENS</h2>
+                        <ul className={`${list} mb-4 mt-4`}>
                             {navShop.map((item, index) => (
                                 <li
                                     key={index}

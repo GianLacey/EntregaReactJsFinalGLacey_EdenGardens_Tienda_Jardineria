@@ -3,7 +3,7 @@ import data from "../../JSON/products.json"
 
 export const getProducts = (productType) => {
     return new Promise((resolve, reject) => {
-        if(data.hasOwnProperty(productType)){
+        if (data.hasOwnProperty(productType)) {
             resolve(data[productType]);
         } else {
             reject(new Error(`Tipo de producto no válido: ${productType}`));
@@ -11,12 +11,35 @@ export const getProducts = (productType) => {
     })
 }
 
-export const getProductById = (id) => {
+export const getProductById = (id, productType) => {
     return new Promise((resolve, reject) => {
 
-        const item = data.plants.find((el) => el.id === id);
+        let items;
 
-        if(item) {
+        switch (productType) {
+            case 'plants':
+                items = data.plants;
+                break;
+            case 'seeds':
+                items = data.seeds;
+                break;
+            case 'flowerpots':
+                items = data.flowerpot;
+                break;
+            case 'tools':
+                items = data.tools;
+                break;
+
+            default:
+                reject({
+                    error: "tipo de producto no valido"
+                })
+                return;
+        }
+
+        const item = items.find((el) => el.id === id);
+
+        if (item) {
             resolve(item);
         } else {
             reject({
@@ -24,5 +47,5 @@ export const getProductById = (id) => {
             })
         }
     })
-} 
+}
 
