@@ -2,9 +2,8 @@
 import { useEffect } from 'react';
 
 import { ItemListContainer } from '../components/ItemListContainer';
-import { getProducts } from '../components/getProducts.js';
 
-export const Pots = (props) => {
+export const Flowerpot = (props) => {
 
   const productType = 'flowerpot';
 

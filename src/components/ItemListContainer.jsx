@@ -3,7 +3,7 @@ import { getProducts } from "./getProducts";
 import { ItemList } from "./ItemList";
 
 
-export const ItemListContainer = ({productType}) => {
+export const ItemListContainer = ({ productType }) => {
 
     const [products, setProducts] = useState([]);
 
@@ -23,7 +23,7 @@ export const ItemListContainer = ({productType}) => {
     return (
         <div>
             
-            <ItemList products = {products}/>
+            <ItemList products = { products } productType={ productType }/>
 
         </div>
 

@@ -23,7 +23,7 @@ export const getProductById = (id, productType) => {
             case 'seeds':
                 items = data.seeds;
                 break;
-            case 'flowerpots':
+            case 'flowerpot':
                 items = data.flowerpot;
                 break;
             case 'tools':

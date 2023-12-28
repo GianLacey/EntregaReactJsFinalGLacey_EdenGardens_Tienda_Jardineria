@@ -5,7 +5,7 @@ import { ItemDetailContainer } from '../pages/ItemDetailContainer';
 import { Cart } from '../components/Cart';
 import { Contact } from '../pages/Contact';
 import { Seeds } from '../pages/Seeds';
-import { Pots } from '../pages/Pots';
+import { Flowerpot } from '../pages/Flowerpot';
 import { Tools } from '../pages/Tools';
 import { Sustainable } from '../pages/Sustainable';
 import { Services } from '../pages/Services';
@@ -24,7 +24,7 @@ export const MainRouter = () => {
       <Route path='/sustentable' element={<Sustainable />}></Route>
       <Route path='/plantas' element={<Plant greeting='Plantas'/>}> </Route>
       <Route path='/semillas y plantines' element={<Seeds greeting='Semillas & Plantines'/>}></Route>
-      <Route path='/masetas' element={<Pots greeting='Masetas' />}></Route>
+      <Route path='/masetas' element={<Flowerpot greeting='Masetas' />}></Route>
       <Route path='/herramientas y maquinas' element={<Tools greeting='Herramientas & Maquinas' />}></Route>
       <Route path='/item/:productType/:id' element={<ItemDetailContainer />}></Route>
       <Route path='/cart' element={<Cart />}></Route>
