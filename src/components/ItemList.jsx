@@ -6,8 +6,9 @@ export const ItemList = ({ products, productType }) => {
         <div className='grid grid-cols-4 '>
 
             {products.length > 0 &&
-                products.map((product) => (
-                    <div key={product.id} className="mx-4 my-2 w-40 font-outfit">
+                products.map((product, index) => (
+                    <div key={`${index}`} className="mx-4 my-2 w-40 font-outfit"> 
+                        
                         <div className="space-y-2 h-full w-40">
                             <div className="w-auto">
                                 <Link to={`/item/${productType}/${product.id}`}><img className="flex-1 w-full" src={product.thumbnail} alt={product.title} /></Link>
