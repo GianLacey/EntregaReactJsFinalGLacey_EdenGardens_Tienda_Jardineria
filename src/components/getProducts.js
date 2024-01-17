@@ -1,51 +1,21 @@
+import { doc, getDoc } from 'firebase/firestore';
+import { db } from '../firebase/config';
 
-import data from "../../JSON/products.json"
+export const getProductById = async (id, productType) => {
+  try {
+    const productRef = doc(db, productType, id);
+    const productSnapshot = await getDoc(productRef);
 
-export const getProducts = (productType) => {
-    return new Promise((resolve, reject) => {
-        if (data.hasOwnProperty(productType)) {
-            resolve(data[productType]);
-        } else {
-            reject(new Error(`Tipo de producto no válido: ${productType}`));
-        }
-    })
-}
-
-export const getProductById = (id, productType) => {
-    return new Promise((resolve, reject) => {
-
-        let items;
-
-        switch (productType) {
-            case 'plants':
-                items = data.plants;
-                break;
-            case 'seeds':
-                items = data.seeds;
-                break;
-            case 'flowerpot':
-                items = data.flowerpot;
-                break;
-            case 'tools':
-                items = data.tools;
-                break;
-
-            default:
-                reject({
-                    error: "tipo de producto no valido"
-                })
-                return;
-        }
-
-        const item = items.find((el) => el.id === id);
-
-        if (item) {
-            resolve(item);
-        } else {
-            reject({
-                error: "No se encontro el producto"
-            })
-        }
-    })
-}
-
+    if (productSnapshot.exists()) {
+      return {
+        id: productSnapshot.id,
+        ...productSnapshot.data(),
+      };
+    } else {
+      throw new Error('No se encontró el producto');
+    }
+  } catch (error) {
+    console.error('Error al obtener el producto:', error);
+    throw error;
+  }
+};

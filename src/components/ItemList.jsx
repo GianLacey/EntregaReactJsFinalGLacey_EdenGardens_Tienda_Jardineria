@@ -2,6 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 export const ItemList = ({ products, productType }) => {
+
+    console.log(products);
+
+    
     return (
         <div className='grid grid-cols-4 '>
 
@@ -11,7 +15,7 @@ export const ItemList = ({ products, productType }) => {
                         
                         <div className="space-y-2 h-full w-40">
                             <div className="w-auto">
-                                <Link to={`/item/${productType}/${product.id}`}><img className="flex-1 w-full" src={product.thumbnail} alt={product.title} /></Link>
+                                <Link to={`/products/EoiK7bkC7jql6YGurdYj/${productType}/${index}`}><img className="flex-1 w-full" src={product.thumbnail} alt={product.title} /></Link>
                             </div>
                             <div className="w-full">
                                 <p className="w-full text-sm text-gray-500">{product.title}</p>
@@ -19,7 +23,7 @@ export const ItemList = ({ products, productType }) => {
                                 <div>
                                     <p className="w-full pb-2 text-xsmed tracking-wide leading-tight font-bold text-gray-600">${product.price}</p>
                                 </div>
-                                <Link to={`/item/${productType}/${product.id}`}>
+                                <Link to={`/products/EoiK7bkC7jql6YGurdYj/${productType}/${index}`}>
                                     <div className="opacity-95 w-full h-6 bg-green-primary flex items-center justify-center">
                                         <p className="text-xxsm text-zinc-100 uppercase">agregar al carrito</p>
                                     </div>
@@ -32,3 +36,5 @@ export const ItemList = ({ products, productType }) => {
 
     );
 };
+
+export default ItemList;

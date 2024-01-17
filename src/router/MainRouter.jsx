@@ -26,7 +26,7 @@ export const MainRouter = () => {
       <Route path='/semillas y plantines' element={<Seeds greeting='Semillas & Plantines'/>}></Route>
       <Route path='/masetas' element={<Flowerpot greeting='Masetas' />}></Route>
       <Route path='/herramientas y maquinas' element={<Tools greeting='Herramientas & Maquinas' />}></Route>
-      <Route path='/item/:productType/:id' element={<ItemDetailContainer />}></Route>
+      <Route path='/products/EoiK7bkC7jql6YGurdYj/:productType/:index' element={<ItemDetailContainer />}></Route>
       <Route path='/cart' element={<Cart />}></Route>
       
     </Routes>
