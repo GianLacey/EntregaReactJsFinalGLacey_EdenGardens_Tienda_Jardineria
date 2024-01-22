@@ -15,10 +15,10 @@ export const CartProvider = ({ children }) => {
 
         const newCart = [...cart];
 
-        const inCart = newCart.find((product) => product.id === productAdd.id);
+        const inCart = newCart.findIndex((prod) => prod.type === productAdd.type && prod.title === productAdd.title);
 
-        if (inCart) {
-            inCart.count += count;
+        if (inCart !== -1) {
+            newCart[inCart].count += count;
         } else {
             newCart.push(productAdd);
         }

@@ -9,10 +9,6 @@ export const ItemDetailContainer = () => {
 
     const params = useParams();
     const { index, productType } = params;
-
-    console.log(index);
-    console.log(productType);
-
     const [product, setProduct] = useState(null);
 
     useEffect(() => {

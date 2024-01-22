@@ -85,23 +85,23 @@ export const NavBar = () => {
 
                     <div className="p-5 flex border-b-[1px] w-full border-green-fluo/30">
                         <div>
-                            <Link to='/'><img className="w-28" src="../src/assets/logos/eden_gardens_logo.webp" alt="logo-page" /></Link>
+                            <Link to='/'><img className="w-28" src="/src/assets/logos/eden_gardens_logo.webp" alt="logo-page" /></Link>
                         </div>
 
                         <div className="flex flex-1 items-center justify-between sm:justify-end font-segoeui me-12 text-gray-500 font-medium text-xsmed">
                             <div className="me-4">
-                                <img className="w-5 mx-auto mb-2" src="../src/assets/icons/whatsapp-logo-2449.svg" alt="wsp" />
+                                <img className="w-5 mx-auto mb-2" src="/src/assets/icons/whatsapp-logo-2449.svg" alt="wsp" />
                                 <p>2326-353453</p>
                             </div>
                             <div>
-                                <img className="w-5 mx-auto mb-2" src="../src/assets/icons/instagram-logo-8869.svg" alt="intagram" />
+                                <img className="w-5 mx-auto mb-2" src="/src/assets/icons/instagram-logo-8869.svg" alt="intagram" />
                                 <p>@company</p>
                             </div>
 
                         </div>
                     </div>
                     <div className={`flex flex-1 items-center gap-8 sm:justify-start w-full bg-white ${isFixed ? "fixed top-0 z-50 transition delay-1000 duration-1000 ease-in-out" : ""}`}>
-                        <h2 className={`ml-11 font-monserrat font-bold text-green-primary ${isFixed ? "block" : "hidden"}`}>EDEN GARDENS</h2>
+                        <Link to='/'><h2 className={`ml-11 font-monserrat font-bold text-green-primary ${isFixed ? "block" : "hidden"}`}>EDEN GARDENS</h2></Link>
                         <ul className={`${list} mb-4 mt-4`}>
                             {navShop.map((item, index) => (
                                 <li

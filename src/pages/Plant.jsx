@@ -1,6 +1,5 @@
 
-import { useEffect } from 'react';
-
+import { useEffect, useState } from 'react';
 import { ItemListContainer } from '../components/ItemListContainer';
 
 export const Plant = (props) => {
@@ -10,6 +9,22 @@ export const Plant = (props) => {
   useEffect(() => {
     document.title = "Plantas | Eden Gardens | Tienda Online de artículos para huerta, jardinería y paisajismo "
   })
+
+  
+  const [filtroAbierto, setFiltroAbierto] = useState({
+    categoria: false,
+    tipo: false,
+    temporada: false,
+  });
+
+  const toggleFiltro = (filtro) => {
+    setFiltroAbierto((prevFiltros) => ({
+      ...prevFiltros,
+      [filtro]: !prevFiltros[filtro],
+
+    }));
+  };
+
 
   return (
     <div>
@@ -84,7 +99,7 @@ export const Plant = (props) => {
 
                   <div className="border-b border-gray-200 py-6">
                     <h3 className="-my-3 flow-root">
-                      <button type="button" className="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500" aria-controls="filter-section-0" aria-expanded="false">
+                      <button type="button" className="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-green-primary" aria-controls="filter-section-0" aria-expanded={filtroAbierto.categoria} onClick={() => toggleFiltro('categoria')}>
                         <span className="font-medium text-gray-900">Categoría</span>
                         <span className="ml-6 flex items-center">
                           <svg className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -96,7 +111,7 @@ export const Plant = (props) => {
                         </span>
                       </button>
                     </h3>
-                    <div className="pt-6" id="filter-section-0">
+                    <div className={`pt-6 ${filtroAbierto.categoria ? 'block' : 'hidden'}`} id="filter-section-0">
                       <div className="space-y-4 ">
                         <div className="flex items-center">
                           <input id="filter-color-0" name="color[]" value="white" type="checkbox" className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-green-primary" />
@@ -135,7 +150,7 @@ export const Plant = (props) => {
                   </div>
                   <div className="border-b border-gray-200 py-6">
                     <h3 className="-my-3 flow-root">
-                      <button type="button" className="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500" aria-controls="filter-section-1" aria-expanded="false">
+                      <button type="button" className="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-green-primary" aria-controls="filter-section-1" aria-expanded={filtroAbierto.tipo} onClick={() => toggleFiltro('tipo')}>
                         <span className="font-medium text-gray-900">Tipo</span>
                         <span className="ml-6 flex items-center">
                           <svg className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -147,7 +162,7 @@ export const Plant = (props) => {
                         </span>
                       </button>
                     </h3>
-                    <div className="pt-6" id="filter-section-1">
+                    <div className={`pt-6 ${filtroAbierto.tipo ? 'block' : 'hidden'}`} id="filter-section-1">
                       <div className="space-y-4 ">
                         <div className="flex items-center">
                           <input id="filter-category-0" name="category[]" value="new-arrivals" type="checkbox" className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-green-primary" />
@@ -170,7 +185,7 @@ export const Plant = (props) => {
                   </div>
                   <div className="border-b border-gray-200 py-6">
                     <h3 className="-my-3 flow-root">
-                      <button type="button" className="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500" aria-controls="filter-section-2" aria-expanded="false">
+                      <button type="button" className="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-green-primary" aria-controls="filter-section-2" aria-expanded={filtroAbierto.temporada} onClick={() => toggleFiltro('temporada')}>
                         <span className="font-medium text-gray-900">Temporada</span>
                         <span className="ml-6 flex items-center">
                           <svg className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -182,7 +197,7 @@ export const Plant = (props) => {
                         </span>
                       </button>
                     </h3>
-                    <div className="pt-6" id="filter-section-2">
+                    <div className={`pt-6 ${filtroAbierto.temporada ? 'block' : 'hidden'}`} id="filter-section-2">
                       <div className="space-y-4">
                         <div className="flex items-center">
                           <input id="filter-size-0" name="size[]" value="2l" type="checkbox" className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-green-primary" />

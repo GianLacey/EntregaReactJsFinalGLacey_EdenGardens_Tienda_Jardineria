@@ -4,7 +4,7 @@ export const Footer = () => {
     return (
         <footer className="mt-52 text-center font-monserrat">
             <section>
-                <div className="mb-[-20px] w-full flex justify-center z-50">
+                <div id='newsletter' className="mb-[-20px] w-full flex justify-center z-50">
                     <div className="rounded-2xl h-52 p-10 w-5/6 text-center text-white bg-green-fluo">
                         <h2 className="mb-8 text-2xl">Sumate al Newsletter</h2>
                         <div className="flex justify-center items-center">
@@ -60,7 +60,7 @@ export const Footer = () => {
                     <a href="#"><img src="https://www.svgrepo.com/show/452231/instagram.svg" alt="instagram" className="w-8" /></a>
                 </div>
                 <div className="flex">
-                    <a href="#"><img src="../src/assets/icons/tarjetas/afip-data-fiscal.png" alt="data-fiscal" className="mx-5 w-8" /></a>
+                    <a href="#"><img src="/src/assets/icons/tarjetas/afip-data-fiscal.png" alt="data-fiscal" className="mx-5 w-8" /></a>
                 </div>
             </section>
         </footer>

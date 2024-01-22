@@ -11,7 +11,6 @@ import { Sustainable } from '../pages/Sustainable';
 import { Services } from '../pages/Services';
 import { Branches } from '../pages/Branches';
 import { AboutUs } from '../pages/AboutUs';
-
 export const MainRouter = () => {
   return (
     //BR recive childrens
@@ -28,11 +27,7 @@ export const MainRouter = () => {
       <Route path='/herramientas y maquinas' element={<Tools greeting='Herramientas & Maquinas' />}></Route>
       <Route path='/products/EoiK7bkC7jql6YGurdYj/:productType/:index' element={<ItemDetailContainer />}></Route>
       <Route path='/cart' element={<Cart />}></Route>
-      
     </Routes>
   )
 }
 
-
-// https://myapp.com/ --> Page Home
-// https://myapp.com/catergory --> Page Category

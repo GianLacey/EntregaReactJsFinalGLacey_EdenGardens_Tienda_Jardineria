@@ -47,8 +47,8 @@ export const Cart = () => {
                                             <div className="flow-root">
                                                 <ul className="-my-6 divide-y divide-gray-200">
                                                     {
-                                                        cart.map((prod) => (
-                                                            <li key={prod.id} className="flex py-6">
+                                                        cart.map((prod, index) => (
+                                                            <li key={index} className="flex py-6">
                                                                 <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
                                                                     <img src={prod.thumbnail} className="h-full w-full object-cover object-center" />
                                                                 </div>

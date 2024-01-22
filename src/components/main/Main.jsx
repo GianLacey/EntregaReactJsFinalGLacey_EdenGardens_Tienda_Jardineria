@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export const Main = () => {
     return (
@@ -12,7 +13,17 @@ export const Main = () => {
                         <p className="text-lg fontMain">Regístrate y entérate primero de las novedades.</p>
                     </div>
                     <div className="flex absolute bottom-10 left-10">
-                        <button className="registro bg-white text-green-primary py-2 px-4 rounded-l">QUIERO SUSCRIBIRME</button>
+                        <Link to={'#newsletter'}><button
+                            className="registro bg-white text-green-primary py-2 px-4 rounded-l"
+                            onClick={() => {
+                                const newsletterSection = document.getElementById('newsletter');
+                                if (newsletterSection) {
+                                    newsletterSection.scrollIntoView({ behavior: 'smooth' });
+                                }
+                            }}
+                        >
+                            QUIERO SUSCRIBIRME
+                        </button></Link>
                         <button className="arrow-container bg-white py-2 px-4 rounded-r">
                             <span className="arrow-icon">
                                 <img src="../src/assets/icons/arrowgreen.ico.ico" alt="flecha" className="w-5" />
